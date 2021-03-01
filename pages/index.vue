@@ -11,7 +11,7 @@ export default {
     const { stories } = await $graphcms.request(
       gql`
         {
-          stories {
+          stories(orderBy: publishedAt_DESC) {
             id
             title
             content
